@@ -1,0 +1,45 @@
+:root {
+    /*colors*/
+    --background-color: rgb(208, 208, 206);
+    --white: rgb(255, 255, 255);
+    --dark-color-vibrant: rgb(0, 48, 53);
+    --mid-color-vibrant: rgb(0, 110, 127);
+    --light-color-vibrant: rgb(89, 188, 198);
+    --dark-color-neutral: rgb(36, 40, 49);
+    --mid-color-neutral: rgb(76, 80, 89);
+
+    /*font families*/
+    --font-name: bold Verdana, Tahoma, sans-serif;
+    --font-header: bold Verdana, Tahoma, sans-serif;
+    --font-copy: Verdana, Tahoma, sans-serif;
+
+    /*font sizes for desktop and bigger*/
+    --font-size-main: 20px;
+    --font-size-h3: 40px;
+    --font-size-h2: 45px;
+    --font-size-name: 106px;
+
+    /*font sizes for tablets*/
+    --tablet-font-size-main:
+    --tablet-font-size-nav-bar:
+    --tablet-font-size-sub-header:
+    --tablet-font-size-name:
+
+    /*font sizes for mobile and smaller*/
+    --mobile-font-size-main: 
+    --mobile-font-size-nav-bar: 
+    --mobile-font-size-sub-header: 
+    --mobile-font-size-name:
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
