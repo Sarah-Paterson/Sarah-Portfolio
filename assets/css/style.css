@@ -18,6 +18,18 @@
     --font-size-h3: 40px;
     --font-size-h2: 45px;
     --font-size-name: 106px;
+
+    /*font sizes for tablet*/
+    --tablet-font-size-body: 18px;
+    --tablet-font-size-h3: 38px;
+    --tablet-font-size-h2: 43px;
+    --tablet-font-size-name: 104px;
+
+    /*font sizes for phone*/
+    --phone-font-size-body: 16px;
+    --phone-font-size-h3: 36px;
+    --phone-font-size-h2: 41px;
+    --phone-font-size-name: 102px;
 }
 
 /* changes the look of the selected elements (click and drag) */
@@ -86,24 +98,42 @@ body {
 
 /* titles for all the info sections */
 .info-title {
-    font: var(--font-size-h2) var(--font-header);
+    font: var(--phone-font-size-h2) var(--font-header);
     color: var(--dark-color-vibrant);
     text-transform: uppercase;
-    text-shadow: -1px 0 var(--dark-color-vibrant), 0 1px var(--dark-color-vibrant), 1px 0 var(--dark-color-vibrant), 0 -1px var(--dark-color-vibrant);
+    padding: 0px 10px;
+    margin: 10px;
 }
 
 /* the text in the about me section */
 #about-me-text {
-    font: var(--font-size-body) var(--font-body);
+    font: var(--phone-font-size-body) var(--font-body);
+    font-size: 95%;
     color: var(--dark-color-vibrant);
+    padding: 20px;
+    width: 100%;
 }
 
 #about-me {
-    background-color: var(--white);
     color: var(--dark-color-vibrant);
     padding: 10px 20px;
-    width: 100%;
     height: fit-content;
+}
+
+.info-section-divider {
+    height: 7px;
+    width: 330px;
+    margin-right: 0;
+}
+
+.info-section {
+    display:block;
+    box-shadow: -10px -10px var(--mid-color-neutral);
+    width: 80%;
+    background-color: var(--white);
+    height: fit-content;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 /* media responsive - tablet */
