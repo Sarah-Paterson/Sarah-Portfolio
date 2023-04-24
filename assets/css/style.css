@@ -7,6 +7,7 @@
     --light-color-vibrant: rgb(89, 188, 198);
     --dark-color-neutral: rgb(36, 40, 49);
     --mid-color-neutral: rgb(76, 80, 89);
+    --mid-color-neutral-transparent: rgba(76, 80, 89, 0.75);
 
     /*font families*/
     --font-name: Verdana, Tahoma, sans-serif;
@@ -22,14 +23,14 @@
     /*font sizes for tablet*/
     --tablet-font-size-body: 18px;
     --tablet-font-size-h3: 37px;
-    --tablet-font-size-h2: 42px;
+    --tablet-font-size-h2: 40px;
     --tablet-font-size-name: 103px;
 
     /*font sizes for phone*/
     --phone-font-size-body: 16px;
-    --phone-font-size-h3: 34px;
-    --phone-font-size-h2: 39px;
-    --phone-font-size-name: 100px;
+    --phone-font-size-h3: 40px;
+    --phone-font-size-h2: 25px;
+    --phone-font-size-name: 50px;
 }
 
 /* changes the look of the selected elements (click and drag) */
@@ -38,42 +39,120 @@
     color: var(--dark-color-vibrant);
 }
 
-* {
+* { margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 /* full page and background */
 body {
     background-color: var(--background-color);
-    margin: 0;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-content: center;
+    min-height: 100vh;
 }
 
 /* mobile navigation menu - mobile first and @media to size up */
-.nav-bar
+#menu__toggle {
+    opacity: 0;
+  }
+  #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+  }
+  .menu__btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  .menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+  }
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+  .menu__item:hover {
+    background-color: #CFD8DC;
+  }
 
-
-/* portfolio header name */
+/* portfolio header name - mobile size first */
+/*
 #name {
+    font-size: var(--phone-font-size-name);
     color: var(--white);
-    font: var(--font-size-name) var(--font-name);
     text-transform: uppercase;
     padding: 10px 145px 0 20px;
     margin: 2px 20px;
-    text-shadow: -1px 0 var(--white), 0 1px var(--white), 1px 0 var(--white), 0 -1px var(--white);
+}
+*/
+
+h2 {
+    font: var(--phone-font-size-h2) var(--font-header);
+}
+
+h3 {
+    font: var(--phone-font-size-h3) var(--font-header);
 }
 
 /* title below name */
 #title {
     color: var(--dark-color-vibrant);
-    font: var(--font-size-h2) var(--font-header);
     text-transform: uppercase;
     padding: 5px;
     margin: 2px 185px;
-    text-shadow: -1px 0 var(--dark-color-vibrant), 0 1px var(--dark-color-vibrant), 1px 0 var(--dark-color-vibrant), 0 -1px var(--dark-color-vibrant);
 }
 
 /* bar behind the name and title */
@@ -114,7 +193,7 @@ body {
 
 /* ofset divider in information sections */
 .info-section-divider {
-    position: relative;
+    position: absolute;
     margin-right: 0;
     height: 7px;
     width: 330px;
@@ -122,19 +201,24 @@ body {
 
 /* information sections */
 .info-section {
-    display:block;
-    box-shadow: -10px -10px var(--mid-color-neutral);
+    display: block;
+    box-shadow: -10px -10px var(--mid-color-neutral-transparent);
     width: 80%;
     background-color: var(--white);
     height: fit-content;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: auto;
+    margin-right: auto;
     color: var(--dark-color-vibrant);
-    padding: 10px 20px;
+    padding: 0px 10px;
+    border: 15px solid var(--light-color-vibrant);
 }
 
 /* media responsive - tablet */
 @media screen and (min-width: 768px) {
+    body {
+        flex-direction: row;
+    }
+
     /* on tablets, set columns to only be 50% of the width and not grow */
     .card-column {
       flex: 0 0 50%;
@@ -159,14 +243,6 @@ body {
   
 /* media responsive - computer */
 @media screen and (min-width: 992px) {
-    header {
-      width: 75%;
-    }
-  
-    .card-column {
-      flex: 0 0 33.333%;
-      max-width: 33.333%;
-    }
 
     /* navigation bar links */
     a {
@@ -174,7 +250,6 @@ body {
         color: var(--dark-color-vibrant);
         text-transform: uppercase;
         margin: 0px 20px;
-        text-shadow: -1px 0 var(--dark-color-vibrant), 0 1px var(--dark-color-vibrant), 1px 0 var(--dark-color-vibrant), 0 -1px var(--dark-color-vibrant);
     }
 
     /* link change color with hover */
@@ -196,6 +271,43 @@ body {
         display: inline;
         font: var(--font-size-h3) var(--font-header);
         margin: 5px;
+    }
+
+    /* bar behind the name and title */
+    #header-bar {
+        width: 100%;
+        height: 235px;
+        margin: 125px auto;
+        height: 260px;
+        margin: 25px auto;
+        padding: 20px;
+        text-align: right;
+        background-image: linear-gradient(var(--mid-color-vibrant), var(--light-color-vibrant));
+    }
+
+    /* portfolio header name */
+    #name {
+        color: var(--white);
+        font: var(--font-size-name) var(--font-name);
+        text-transform: uppercase;
+        padding: 10px 145px 0 20px;
+        margin: 2px 20px;
+    }
+
+    /* title below name */
+    #title {
+        color: var(--dark-color-vibrant);
+        font: var(--font-size-h2) var(--font-header);
+        text-transform: uppercase;
+        padding: 5px;
+        margin: 2px 185px;
+    }
+
+    /* portfolio picture */
+    #Portfolio-Picture {
+        position: relative;
+        margin: -380px 20px 10px 55px;
+        padding: 0.5rem 1rem;
     }
 
     /* info title font size */
