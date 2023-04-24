@@ -18,21 +18,9 @@
     --font-size-h3: 40px;
     --font-size-h2: 45px;
     --font-size-name: 106px;
-
-    /*font sizes for tablets*/
-    --tablet-font-size-main:
-    --tablet-font-size-nav-bar:
-    --tablet-font-size-sub-header:
-    --tablet-font-size-name:
-
-    /*font sizes for mobile and smaller*/
-    --mobile-font-size-main: 
-    --mobile-font-size-nav-bar: 
-    --mobile-font-size-sub-header: 
-    --mobile-font-size-name:
 }
 
-  /*changes the look of the selected elements (click and drag)*/
+  /* changes the look of the selected elements (click and drag) */
   ::selection {
     background-color: var(--light-color-vibrant);
     color: var(--dark-color-vibrant);
@@ -54,21 +42,61 @@ body {
     color: var(--white);
     font: var(--font-size-name) var(--font-name);
     text-transform: uppercase;
+    padding: 10px 145px 0 20px;
+    margin: 2px 20px;
+    text-shadow: -1px 0 var(--white), 0 1px var(--white), 1px 0 var(--white), 0 -1px var(--white);
 }
 
-h2 {
+/* title below name */
+#title {
     color: var(--dark-color-vibrant);
     font: var(--font-size-h2) var(--font-header);
     text-transform: uppercase;
+    padding: 5px;
+    margin: 2px 185px;
+    text-shadow: -1px 0 var(--dark-color-vibrant), 0 1px var(--dark-color-vibrant), 1px 0 var(--dark-color-vibrant), 0 -1px var(--dark-color-vibrant);
 }
 
+/* navigation bar links */
+a {
+    text-decoration: none;
+    color: var(--dark-color-vibrant);
+    text-transform: uppercase;
+    margin: 0px 20px;
+    text-shadow: -1px 0 var(--dark-color-vibrant), 0 1px var(--dark-color-vibrant), 1px 0 var(--dark-color-vibrant), 0 -1px var(--dark-color-vibrant);
+}
 
-header {
+/* link change color with hover */
+a:hover {
+    color: var(--mid-color-vibrant);
+}
+
+/* navigation bar */
+nav {
+    text-align: right;
+    margin-top: 30px;
+    padding: 5px 125px;
+}
+
+.nav-item {
+    position: relative;
+    color: var(--dark-color-vibrant);
+    display: inline;
+    font: var(--font-size-h3) var(--font-header);
+    margin: 5px;
+}
+
+#header-bar {
     width: 100%;
-    height: 235px;
-    margin: 125px auto;
+    height: 260px;
+    margin: 25px auto;
     padding: 20px;
     text-align: right;
     background-image: linear-gradient(var(--mid-color-vibrant), var(--light-color-vibrant));
 }
-  
+
+#Portfolio-Picture {
+    position: relative;
+    margin: -380px 20px 10px 55px;
+    padding: 0.5rem 1rem;
+}
