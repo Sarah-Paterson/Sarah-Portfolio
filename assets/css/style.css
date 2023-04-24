@@ -56,24 +56,25 @@ body {
 }
 
 /* mobile navigation menu - mobile first and @media to size up */
-#menu__toggle {
+/* menu provided by https://codepen.io/alvarotrigo/pen/yLzaPVJ, https://codepen.io/alvarotrigo */
+#nav-toggle {
     opacity: 0;
-  }
-  #menu__toggle:checked + .menu__btn > span {
+}
+#nav-toggle:checked + .nav-btn > span {
     transform: rotate(45deg);
-  }
-  #menu__toggle:checked + .menu__btn > span::before {
+}
+#nav-toggle:checked + .nav-btn > span::before {
     top: 0;
     transform: rotate(0deg);
-  }
-  #menu__toggle:checked + .menu__btn > span::after {
+}
+#nav-toggle:checked + .nav-btn > span::after {
     top: 0;
     transform: rotate(90deg);
-  }
-  #menu__toggle:checked ~ .menu__box {
+}
+#nav-toggle:checked ~ .nav-menu {
     left: 0 !important;
-  }
-  .menu__btn {
+}
+.nav-btn {
     position: fixed;
     top: 20px;
     left: 20px;
@@ -81,26 +82,26 @@ body {
     height: 26px;
     cursor: pointer;
     z-index: 1;
-  }
-  .menu__btn > span,
-  .menu__btn > span::before,
-  .menu__btn > span::after {
+}
+.nav-btn > span,
+.nav-btn > span::before,
+.nav-btn > span::after {
     display: block;
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #616161;
+    background-color: var(--dark-color-vibrant);
     transition-duration: .25s;
-  }
-  .menu__btn > span::before {
+}
+.nav-btn > span::before {
     content: '';
     top: -8px;
-  }
-  .menu__btn > span::after {
+}
+.nav-btn > span::after {
     content: '';
     top: 8px;
-  }
-  .menu__box {
+}
+.nav-menu {
     display: block;
     position: fixed;
     top: 0;
@@ -110,23 +111,23 @@ body {
     margin: 0;
     padding: 80px 0;
     list-style: none;
-    background-color: #ECEFF1;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    background-color: var(--light-color-vibrant);
+    box-shadow: 2px 2px 6px var(--mid-color-neutral-transparent);
     transition-duration: .25s;
-  }
-  .menu__item {
+}
+.nav-link {
     display: block;
     padding: 12px 24px;
-    color: #333;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 600;
+    color: var(--dark-color-vibrant);
+    font-family: var(--font-header);
+    font-size: var(--phone-font-size-h2);
     text-decoration: none;
+    text-transform: uppercase;
     transition-duration: .25s;
-  }
-  .menu__item:hover {
-    background-color: #CFD8DC;
-  }
+}
+.nav-link:hover {
+    background-color: var(--white);
+}
 
 /* portfolio header name - mobile size first */
 /*
@@ -243,6 +244,8 @@ h3 {
   
 /* media responsive - computer */
 @media screen and (min-width: 992px) {
+
+    
 
     /* navigation bar links */
     a {
