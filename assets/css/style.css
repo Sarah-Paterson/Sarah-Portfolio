@@ -11,33 +11,42 @@
     /*font families*/
     --font-name: Verdana, Tahoma, sans-serif;
     --font-header: Verdana, Tahoma, sans-serif;
-    --font-copy: Verdana, Tahoma, sans-serif;
+    --font-body: Verdana, Tahoma, sans-serif;
 
     /*font sizes for desktop and bigger*/
-    --font-size-main: 20px;
+    --font-size-body: 20px;
     --font-size-h3: 40px;
     --font-size-h2: 45px;
     --font-size-name: 106px;
 }
 
-  /* changes the look of the selected elements (click and drag) */
-  ::selection {
+/* changes the look of the selected elements (click and drag) */
+::selection {
     background-color: var(--light-color-vibrant);
     color: var(--dark-color-vibrant);
-  }
+}
 
 * {
     box-sizing: border-box;
 }
 
+/* full page and background */
 body {
     background-color: var(--background-color);
     margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-content: center;
 }
 
+/* mobile navigation menu - mobile first and @media to size up */
+.nav-bar {
+
+}
+
+
+/* portfolio header name */
 #name {
     color: var(--white);
     font: var(--font-size-name) var(--font-name);
@@ -57,35 +66,7 @@ body {
     text-shadow: -1px 0 var(--dark-color-vibrant), 0 1px var(--dark-color-vibrant), 1px 0 var(--dark-color-vibrant), 0 -1px var(--dark-color-vibrant);
 }
 
-/* navigation bar links */
-a {
-    text-decoration: none;
-    color: var(--dark-color-vibrant);
-    text-transform: uppercase;
-    margin: 0px 20px;
-    text-shadow: -1px 0 var(--dark-color-vibrant), 0 1px var(--dark-color-vibrant), 1px 0 var(--dark-color-vibrant), 0 -1px var(--dark-color-vibrant);
-}
-
-/* link change color with hover */
-a:hover {
-    color: var(--mid-color-vibrant);
-}
-
-/* navigation bar */
-nav {
-    text-align: right;
-    margin-top: 30px;
-    padding: 5px 125px;
-}
-
-.nav-item {
-    position: relative;
-    color: var(--dark-color-vibrant);
-    display: inline;
-    font: var(--font-size-h3) var(--font-header);
-    margin: 5px;
-}
-
+/* bar behind the name and title */
 #header-bar {
     width: 100%;
     height: 260px;
@@ -95,8 +76,89 @@ nav {
     background-image: linear-gradient(var(--mid-color-vibrant), var(--light-color-vibrant));
 }
 
+/* portfolio picture */
 #Portfolio-Picture {
+    width: 80%;
     position: relative;
-    margin: -380px 20px 10px 55px;
-    padding: 0.5rem 1rem;
+    margin: 0 20px;
+    padding: 20px;
 }
+
+/* titles for all the info sections */
+.info-title {
+    font: var(--font-size-h2) var(--font-header);
+    color: var(--dark-color-vibrant);
+    text-transform: uppercase;
+    text-shadow: -1px 0 var(--dark-color-vibrant), 0 1px var(--dark-color-vibrant), 1px 0 var(--dark-color-vibrant), 0 -1px var(--dark-color-vibrant);
+}
+
+/* the text in the about me section */
+#about-me-text {
+    font: var(--font-size-body) var(--font-body);
+    color: var(--dark-color-vibrant);
+}
+
+#about-me {
+    background-color: var(--white);
+    color: var(--dark-color-vibrant);
+    padding: 10px 20px;
+    width: 100%;
+    height: fit-content;
+}
+
+/* media responsive - tablet */
+@media screen and (min-width: 768px) {
+    /* on tablets, set columns to only be 50% of the width and not grow */
+    .card-column {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  
+    /* select the last child to grow to full width if it has space to grow */
+    .card-column:last-child {
+      flex-grow: 1;
+    }
+}
+  
+/* media responsive - computer */
+@media screen and (min-width: 992px) {
+    header {
+      width: 75%;
+    }
+  
+    .card-column {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+
+    /* navigation bar links */
+    a {
+        text-decoration: none;
+        color: var(--dark-color-vibrant);
+        text-transform: uppercase;
+        margin: 0px 20px;
+        text-shadow: -1px 0 var(--dark-color-vibrant), 0 1px var(--dark-color-vibrant), 1px 0 var(--dark-color-vibrant), 0 -1px var(--dark-color-vibrant);
+    }
+
+    /* link change color with hover */
+    a:hover {
+        color: var(--mid-color-vibrant);
+    }
+
+    /* navigation bar */
+    nav {
+        text-align: right;
+        margin-top: 30px;
+        padding: 5px 125px;
+    }
+
+    /* navigational bar text */
+    .nav-item {
+        position: relative;
+        color: var(--dark-color-vibrant);
+        display: inline;
+        font: var(--font-size-h3) var(--font-header);
+        margin: 5px;
+    }
+}
+  
