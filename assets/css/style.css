@@ -155,14 +155,6 @@ nav {
     width: 100%;
 }
 
-/* ofset divider in information sections */
-/*
-#aboutme.info-section-divider {
-    position: absolute;
-    margin-right: 0;
-}
-/*
-
 /* information sections */
 .info-section {
     display: block;
@@ -220,6 +212,30 @@ nav {
 .my-work-link {
     position: relative;
     left: -20px;
+}
+
+.contact-info {
+    flex-direction: row;
+    font: var(--font-size-h3) var(--font-header);
+    color: var(--mid-color-vibrant);
+    flex: 1 0 200px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    max-width: 755px;
+    min-width: 380px;
+    max-width: 100px;
+}
+
+.contact-info:hover {
+    background-color: var(--light-color-vibrant);
+    color: var(--dark-color-vibrant);
+}
+
+.contact-icon {
+    width: 100px;
+    height: 100px;
 }
 
 /* media responsive - tablet */
