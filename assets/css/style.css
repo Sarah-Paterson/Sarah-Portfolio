@@ -127,10 +127,10 @@ nav {
 
 #about-me {
     position: absolute;
-    bottom: 250px;
+    bottom: 160px;
     left: 725px;
     margin: 0px;
-    width: 1192px;
+    width: 1150px;
 }
 
 /* info title font size */
@@ -158,9 +158,9 @@ nav {
 /* ofset divider in information sections */
 .info-section-divider {
     position: absolute;
+    margin-top: 20px;
     margin-right: 0;
     height: 7px;
-    width: 330px;
 }
 
 /* information sections */
@@ -176,12 +176,18 @@ nav {
     color: var(--dark-color-vibrant);
     padding: 0px 10px;
     border: 15px solid var(--light-color-vibrant);
+    min-height: 355px;
 }
 
 #my-work {
     display: flex;
     flex-wrap: wrap;
     margin-top: 2%;
+    position: absolute;
+    bottom: -250px;
+    left: 80px;
+    margin: 0px;
+    width: 1800px;
 }
 
 .card {
@@ -198,17 +204,13 @@ nav {
     color: var(--white);
     font: var(--font-size-h2) var(--font-header);
     text-transform: uppercase;
-  }
-
-/*
-.my-work-link {
-    flex: 1 0 0;
-    padding: 10px;
-    text-align: center;
-    border-style: solid;
-    border-width: 1px;
 }
-*/
+
+.card img {
+    width: 100%;
+    max-width: 1702px;
+}
+
 /* media responsive - tablet */
 @media screen and (min-width: 768px) {
     body {
