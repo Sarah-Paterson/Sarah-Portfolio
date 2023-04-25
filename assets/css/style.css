@@ -91,7 +91,6 @@ nav {
 /* bar behind the name and title */
 #header-bar {
     min-width: 1920px;
-    height: 235px;
     margin: 125px auto;
     height: 260px;
     margin: 25px auto;
@@ -122,7 +121,6 @@ nav {
 #Portfolio-Picture {
     position: relative;
     margin: -380px 20px 10px 55px;
-    padding: 0.5rem 1rem;
 }
 
 .info-section-divider {
@@ -252,43 +250,23 @@ nav {
 }
 
 footer {
-    font: var(--font-size-h2) var(--font-header);
+    font: var(--font-size-h3) var(--font-header);
     color: var(--dark-color-vibrant);
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 2800px;
+    left: 80px;
+    margin: 0px;
+    width: 1800px;
 }
 
 /* media responsive - tablet */
-@media screen and (min-width: 768px) {
-    body {
-        flex-direction: row;
-    }
-
-    /* on tablets, set columns to only be 50% of the width and not grow */
-    .card-column {
-      flex: 0 0 50%;
-      max-width: 50%;
-    }
-  
-    /* select the last child to grow to full width if it has space to grow */
-    .card-column:last-child {
-      flex-grow: 1;
-    }
-
-    /* info title font size */
-    .info-title {
-        font-size: var(--tablet-font-size-h2);
-    }
-
-    /* info content text font size */
-    #about-me-text {
-        font-size: var(--tablet-font-size-body);
-    }
-}
-  
-/* media responsive - phone */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1286px) {
 
     /* menu provided by https://codepen.io/alvarotrigo/pen/yLzaPVJ, https://codepen.io/alvarotrigo */
     #nav-toggle {
+        display: block;
         opacity: 0;
     }
     #nav-toggle:checked + .nav-btn > span {
@@ -360,7 +338,110 @@ footer {
         background-color: var(--white);
     }
 
-    /* portfolio header name - mobile size first */
+    /* navigation bar - adjust for tablet */
+    /*
+    nav {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    */
+
+    /* navigational bar text - adjust for tablet */
+    /*
+    .nav-item {
+        font-size: var(--tablet-font-size-h3);
+    }
+    */
+
+    /* bar behind the name and title - adjust for tablet */
+    #header-bar {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* portfolio header name - adjust for tablet */
+    #name {
+        font-size: var(--tablet-font-size-name);
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 145px;
+    }
+
+    /* title below name -adjust for tablet */
+    #title {
+        font-size: var(--tablet-font-size-h2);
+    }
+
+    /* portfolio picture - adjust for tablet */
+    #Portfolio-Picture {
+        margin:  0px 634px;
+    }
+
+    #about-me {
+        bottom: 800px;
+        left: 300px;
+        right: 300px;
+        width: 1286px;
+    }
+
+    /* info title font size - adjust for tablet */
+    .info-title {
+        font-size: var(--tablet-font-size-h2);
+    }
+
+    /* titles for all the info sections - adjust for tablet */
+    .info-title {
+        font-size: var(--tablet-font-size-h2);
+    }
+
+    /* the text in the about me section - adjust for tablet */
+    #about-me-text {
+        font-size: var(--tablet-font-size-body);
+    }
+
+    /* information sections - adjust for tablet */
+    .info-section {
+        width: 1286px;
+    }
+
+    /* my work - adjust for tablet */
+    #my-work {
+        top: 1550px;
+        left: 300px;
+        width: 1286px;
+    }
+
+    /* contact me section - adjust for tablet */
+    #contact-me {
+        top: 4330px;
+        left: 300px;
+        width: 1286px;
+    }
+
+    .contact-info-link:hover {
+        color: var(--light-color-vibrant);
+    }
+
+    .contact-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    footer {
+        font-size: var(--tablet-font-size-h3);
+        top: 4800px;
+        left: 80px;
+        margin: 0px;
+        width: 1800px;
+    }
+}
+  
+/* media responsive - phone */
+@media screen and (max-width: 480px) {
+
+    /* portfolio header name - mobile size */
     #name {
         font-size: var(--phone-font-size-name);
         color: var(--white);
