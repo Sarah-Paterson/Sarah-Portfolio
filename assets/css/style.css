@@ -156,12 +156,12 @@ nav {
 }
 
 /* ofset divider in information sections */
-.info-section-divider {
+/*
+#aboutme.info-section-divider {
     position: absolute;
-    margin-top: 20px;
     margin-right: 0;
-    height: 7px;
 }
+/*
 
 /* information sections */
 .info-section {
@@ -184,31 +184,42 @@ nav {
     flex-wrap: wrap;
     margin-top: 2%;
     position: absolute;
-    bottom: -250px;
+    top: 800px;
     left: 80px;
     margin: 0px;
     width: 1800px;
 }
 
+/* my work card sections */
 .card {
     flex: 1 0 200px;
+    margin: 10px;
     padding: 10px;
     text-align: center;
-    border-style: solid;
-    border-width: 1px;
+    align-items: center;
+    max-width: 1700px;
+    min-width: 835px;
 }
 
-.card header {
+.card:hover {
+    background-color: var(--light-color-vibrant);
+    color: var(--dark-color-vibrant);
+}
+
+.card-header {
+    position: relative;
+    top: 20px;
     padding: 20px;
     background: var(--dark-color-vibrant);
     color: var(--white);
     font: var(--font-size-h2) var(--font-header);
     text-transform: uppercase;
+    max-width: 1667px;
 }
 
-.card img {
-    width: 100%;
-    max-width: 1702px;
+.my-work-link {
+    position: relative;
+    left: -20px;
 }
 
 /* media responsive - tablet */
