@@ -125,6 +125,10 @@ nav {
     padding: 0.5rem 1rem;
 }
 
+.info-section-divider {
+    max-height: 7px;
+}
+
 #about-me {
     position: absolute;
     bottom: 160px;
@@ -214,11 +218,21 @@ nav {
     left: -20px;
 }
 
+#contact-me {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2%;
+    position: absolute;
+    top: 2440px;
+    left: 80px;
+    margin: 0px;
+    width: 1800px;
+}
+
 .contact-info {
-    flex-direction: row;
-    font: var(--font-size-h3) var(--font-header);
+    font: var(--font-size-body) var(--font-header);
     color: var(--mid-color-vibrant);
-    flex: 1 0 200px;
+    flex: 1 0 0;
     margin: 10px;
     padding: 10px;
     text-align: center;
@@ -228,14 +242,18 @@ nav {
     max-width: 100px;
 }
 
-.contact-info:hover {
-    background-color: var(--light-color-vibrant);
-    color: var(--dark-color-vibrant);
+.contact-info-link:hover {
+    color: var(--light-color-vibrant);
 }
 
 .contact-icon {
     width: 100px;
     height: 100px;
+}
+
+footer {
+    font: var(--font-size-h2) var(--font-header);
+    color: var(--dark-color-vibrant);
 }
 
 /* media responsive - tablet */
