@@ -47,7 +47,7 @@
 /* full page and background */
 body {
     background-color: var(--background-color);
-    margin: 0 auto;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -55,110 +55,44 @@ body {
     min-height: 100vh;
 }
 
-/* mobile navigation menu - mobile first and @media to size up */
-/* menu provided by https://codepen.io/alvarotrigo/pen/yLzaPVJ, https://codepen.io/alvarotrigo */
-#nav-toggle {
-    opacity: 0;
-}
-#nav-toggle:checked + .nav-btn > span {
-    transform: rotate(45deg);
-}
-#nav-toggle:checked + .nav-btn > span::before {
-    top: 0;
-    transform: rotate(0deg);
-}
-#nav-toggle:checked + .nav-btn > span::after {
-    top: 0;
-    transform: rotate(90deg);
-}
-#nav-toggle:checked ~ .nav-menu {
-    left: 0 !important;
-}
-.nav-btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 26px;
-    height: 26px;
-    cursor: pointer;
-    z-index: 1;
-}
-.nav-btn > span,
-.nav-btn > span::before,
-.nav-btn > span::after {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: var(--dark-color-vibrant);
-    transition-duration: .25s;
-}
-.nav-btn > span::before {
-    content: '';
-    top: -8px;
-}
-.nav-btn > span::after {
-    content: '';
-    top: 8px;
-}
-.nav-menu {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 300px;
-    height: 100%;
-    margin: 0;
-    padding: 80px 0;
-    list-style: none;
-    background-color: var(--light-color-vibrant);
-    box-shadow: 2px 2px 6px var(--mid-color-neutral-transparent);
-    transition-duration: .25s;
-}
-.nav-link {
-    display: block;
-    padding: 12px 24px;
-    color: var(--dark-color-vibrant);
-    font-family: var(--font-header);
-    font-size: var(--phone-font-size-h2);
+/* navigation bar links */
+a {
     text-decoration: none;
-    text-transform: uppercase;
-    transition-duration: .25s;
-}
-.nav-link:hover {
-    background-color: var(--white);
-}
-
-/* portfolio header name - mobile size first */
-/*
-#name {
-    font-size: var(--phone-font-size-name);
-    color: var(--white);
-    text-transform: uppercase;
-    padding: 10px 145px 0 20px;
-    margin: 2px 20px;
-}
-*/
-
-h2 {
-    font: var(--phone-font-size-h2) var(--font-header);
-}
-
-h3 {
-    font: var(--phone-font-size-h3) var(--font-header);
-}
-
-/* title below name */
-#title {
     color: var(--dark-color-vibrant);
     text-transform: uppercase;
-    padding: 5px;
-    margin: 2px 185px;
+    margin: 0px 20px;
+}
+
+/* link change color with hover */
+a:hover {
+    color: var(--mid-color-vibrant);
+}
+
+/* navigation bar */
+nav {
+    text-align: right;
+    margin-top: 30px;
+    padding: 5px 125px;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+/* navigational bar text */
+.nav-item {
+    position: relative;
+    color: var(--dark-color-vibrant);
+    display: inline;
+    font: var(--font-size-h3) var(--font-header);
+    margin: 5px;
 }
 
 /* bar behind the name and title */
 #header-bar {
-    width: 100%;
+    min-width: 1920px;
+    height: 235px;
+    margin: 125px auto;
     height: 260px;
     margin: 25px auto;
     padding: 20px;
@@ -166,17 +100,47 @@ h3 {
     background-image: linear-gradient(var(--mid-color-vibrant), var(--light-color-vibrant));
 }
 
+/* portfolio header name */
+#name {
+    color: var(--white);
+    font: var(--font-size-name) var(--font-name);
+    text-transform: uppercase;
+    padding: 10px 145px 0 20px;
+    margin: 2px 20px;
+}
+
+/* title below name */
+#title {
+    color: var(--dark-color-vibrant);
+    font: var(--font-size-h2) var(--font-header);
+    text-transform: uppercase;
+    padding: 5px;
+    margin: 2px 185px;
+}
+
 /* portfolio picture */
 #Portfolio-Picture {
-    width: 80%;
     position: relative;
-    margin: 0 20px;
-    padding: 20px;
+    margin: -380px 20px 10px 55px;
+    padding: 0.5rem 1rem;
+}
+
+#about-me {
+    position: absolute;
+    bottom: 250px;
+    left: 725px;
+    margin: 0px;
+    width: 1192px;
+}
+
+/* info title font size */
+.info-title {
+    font-size: var(--font-size-h2);
 }
 
 /* titles for all the info sections */
 .info-title {
-    font: var(--phone-font-size-h2) var(--font-header);
+    font: var(--font-size-h2) var(--font-header);
     color: var(--dark-color-vibrant);
     text-transform: uppercase;
     padding: 0px 10px;
@@ -185,8 +149,7 @@ h3 {
 
 /* the text in the about me section */
 #about-me-text {
-    font: var(--phone-font-size-body) var(--font-body);
-    font-size: 95%;
+    font: var(--font-size-body) var(--font-body);
     color: var(--dark-color-vibrant);
     padding: 20px;
     width: 100%;
@@ -203,6 +166,7 @@ h3 {
 /* information sections */
 .info-section {
     display: block;
+    position: absolute;
     box-shadow: -10px -10px var(--mid-color-neutral-transparent);
     width: 80%;
     background-color: var(--white);
@@ -214,6 +178,37 @@ h3 {
     border: 15px solid var(--light-color-vibrant);
 }
 
+#my-work {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2%;
+}
+
+.card {
+    flex: 1 0 200px;
+    padding: 10px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.card header {
+    padding: 20px;
+    background: var(--dark-color-vibrant);
+    color: var(--white);
+    font: var(--font-size-h2) var(--font-header);
+    text-transform: uppercase;
+  }
+
+/*
+.my-work-link {
+    flex: 1 0 0;
+    padding: 10px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+}
+*/
 /* media responsive - tablet */
 @media screen and (min-width: 768px) {
     body {
@@ -242,45 +237,110 @@ h3 {
     }
 }
   
-/* media responsive - computer */
-@media screen and (min-width: 992px) {
+/* media responsive - phone */
+@media screen and (max-width: 480px) {
 
-    
-
-    /* navigation bar links */
-    a {
+    /* menu provided by https://codepen.io/alvarotrigo/pen/yLzaPVJ, https://codepen.io/alvarotrigo */
+    #nav-toggle {
+        opacity: 0;
+    }
+    #nav-toggle:checked + .nav-btn > span {
+        transform: rotate(45deg);
+    }
+    #nav-toggle:checked + .nav-btn > span::before {
+        top: 0;
+        transform: rotate(0deg);
+    }
+    #nav-toggle:checked + .nav-btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    #nav-toggle:checked ~ .nav-menu {
+        left: 0 !important;
+    }
+    .nav-btn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .nav-btn > span,
+    .nav-btn > span::before,
+    .nav-btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: var(--dark-color-vibrant);
+        transition-duration: .25s;
+    }
+    .nav-btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    .nav-btn > span::after {
+        content: '';
+        top: 8px;
+    }
+    .nav-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 300px;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        background-color: var(--light-color-vibrant);
+        box-shadow: 2px 2px 6px var(--mid-color-neutral-transparent);
+        transition-duration: .25s;
+    }
+    .nav-link {
+        display: block;
+        padding: 12px 24px;
+        color: var(--dark-color-vibrant);
+        font-family: var(--font-header);
+        font-size: var(--phone-font-size-h2);
         text-decoration: none;
+        text-transform: uppercase;
+        transition-duration: .25s;
+    }
+    .nav-link:hover {
+        background-color: var(--white);
+    }
+
+    /* portfolio header name - mobile size first */
+    #name {
+        font-size: var(--phone-font-size-name);
+        color: var(--white);
+        text-transform: uppercase;
+        padding: 10px 145px 0 20px;
+        margin: 2px 20px;
+    }
+
+    h2 {
+        font: var(--phone-font-size-h2) var(--font-header);
+    }
+
+    h3 {
+        font: var(--phone-font-size-h3) var(--font-header);
+    }
+
+    /* title below name */
+    #title {
         color: var(--dark-color-vibrant);
         text-transform: uppercase;
-        margin: 0px 20px;
-    }
-
-    /* link change color with hover */
-    a:hover {
-        color: var(--mid-color-vibrant);
-    }
-
-    /* navigation bar */
-    nav {
-        text-align: right;
-        margin-top: 30px;
-        padding: 5px 125px;
-    }
-
-    /* navigational bar text */
-    .nav-item {
-        position: relative;
-        color: var(--dark-color-vibrant);
-        display: inline;
-        font: var(--font-size-h3) var(--font-header);
-        margin: 5px;
+        padding: 5px;
+        margin: 2px 185px;
     }
 
     /* bar behind the name and title */
     #header-bar {
         width: 100%;
-        height: 235px;
-        margin: 125px auto;
         height: 260px;
         margin: 25px auto;
         padding: 20px;
@@ -288,31 +348,14 @@ h3 {
         background-image: linear-gradient(var(--mid-color-vibrant), var(--light-color-vibrant));
     }
 
-    /* portfolio header name */
-    #name {
-        color: var(--white);
-        font: var(--font-size-name) var(--font-name);
-        text-transform: uppercase;
-        padding: 10px 145px 0 20px;
-        margin: 2px 20px;
-    }
-
-    /* title below name */
-    #title {
-        color: var(--dark-color-vibrant);
-        font: var(--font-size-h2) var(--font-header);
-        text-transform: uppercase;
-        padding: 5px;
-        margin: 2px 185px;
-    }
-
     /* portfolio picture */
     #Portfolio-Picture {
+        width: 80%;
         position: relative;
-        margin: -380px 20px 10px 55px;
-        padding: 0.5rem 1rem;
+        margin: 0 20px;
+        padding: 20px;
     }
-
+    
     /* info title font size */
     .info-title {
         font-size: var(--font-size-h2);
@@ -321,6 +364,47 @@ h3 {
     /* info content text font size */
     #about-me-text {
         font-size: var(--font-size-body);
+    }
+
+    /* titles for all the info sections */
+    .info-title {
+        font: var(--phone-font-size-h2) var(--font-header);
+        color: var(--dark-color-vibrant);
+        text-transform: uppercase;
+        padding: 0px 10px;
+        margin: 10px;
+    }
+
+    /* the text in the about me section */
+    #about-me-text {
+        font: var(--phone-font-size-body) var(--font-body);
+        font-size: 95%;
+        color: var(--dark-color-vibrant);
+        padding: 20px;
+        width: 100%;
+    }
+
+    /* ofset divider in information sections */
+    .info-section-divider {
+        position: absolute;
+        margin-right: 0;
+        height: 7px;
+        width: 330px;
+    }
+
+    /* information sections */
+    .info-section {
+        display: block;
+        position: relative;
+        box-shadow: -10px -10px var(--mid-color-neutral-transparent);
+        width: 80%;
+        background-color: var(--white);
+        height: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        color: var(--dark-color-vibrant);
+        padding: 0px 10px;
+        border: 15px solid var(--light-color-vibrant);
     }
 }
   
