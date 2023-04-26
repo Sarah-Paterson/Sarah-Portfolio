@@ -16,15 +16,15 @@
 
     /*font sizes for desktop and bigger*/
     --font-size-body: 20px;
-    --font-size-h3: 40px;
-    --font-size-h2: 45px;
-    --font-size-name: 106px;
+    --font-size-h3: 32px;
+    --font-size-h2: 38px;
+    --font-size-name: 88px;
 
     /*font sizes for tablet*/
     --tablet-font-size-body: 18px;
-    --tablet-font-size-h3: 37px;
-    --tablet-font-size-h2: 40px;
-    --tablet-font-size-name: 103px;
+    --tablet-font-size-h3: 25px;
+    --tablet-font-size-h2: 32px;
+    --tablet-font-size-name: 75px;
 
     /*font sizes for phone*/
     --phone-font-size-body: 16px;
@@ -61,7 +61,7 @@ header {
 
 /* navigation bar */
 nav {
-    text-align: right;
+    text-align: center;
     margin-top: 30px;
     padding: 5px 125px;
 }
@@ -89,7 +89,7 @@ a:hover {
     color: var(--dark-color-vibrant);
     display: inline;
     font: var(--font-size-h3) var(--font-header);
-    margin: 5px;
+    margin: 2%;
 }
 
 /* bar behind the name and title */
@@ -103,13 +103,18 @@ a:hover {
     background-image: linear-gradient(var(--mid-color-vibrant), var(--light-color-vibrant));
 }
 
+.name-title {
+    float: right;
+    margin: 0 2% 0 35%;
+}
+
 /* portfolio header name */
 #name {
     color: var(--white);
     font: var(--font-size-name) var(--font-name);
     text-transform: uppercase;
-    padding: 10px 145px 0 20px;
-    margin: 2px 20px;
+    padding: 2% 0 0 0;
+    /* margin: 2px 20px; */
 }
 
 /* title below name */
@@ -117,15 +122,13 @@ a:hover {
     color: var(--dark-color-vibrant);
     font: var(--font-size-h2) var(--font-header);
     text-transform: uppercase;
-    padding: 5px;
-    margin: 2px 185px;
 }
 
 /* portfolio picture */
 #Portfolio-Picture {
     position: relative;
-    margin: -380px 20px 10px 55px;
-    box-shadow: -10px -10px var(--mid-color-neutral-transparent);
+    margin: -250px 20px 10px 55px;
+    box-shadow: -20px -20px var(--mid-color-neutral-transparent);
 }
 
 .info-section-divider {
@@ -133,11 +136,9 @@ a:hover {
 }
 
 #about-me {
-    position: absolute;
-    bottom: 160px;
-    left: 725px;
-    margin: 0px;
-    width: 65%;
+    float: right;
+    margin: -25% 0 0 40%;
+    width: 60%;
 }
 
 /* info title font size */
@@ -165,8 +166,7 @@ a:hover {
 /* information sections */
 .info-section {
     display: block;
-    position: absolute;
-    box-shadow: -10px -10px var(--mid-color-neutral-transparent);
+    box-shadow: -20px -20px var(--mid-color-neutral-transparent);
     width: 80%;
     background-color: var(--white);
     height: fit-content;
@@ -181,12 +181,8 @@ a:hover {
 #my-work {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 2%;
-    position: absolute;
-    top: 800px;
-    left: 80px;
-    margin: 0px;
-    width: 100%;
+    width: 98%;
+    margin: 3% 2% 0 2%;
 }
 
 /* my work card sections */
@@ -196,8 +192,8 @@ a:hover {
     padding: 10px;
     text-align: center;
     align-items: center;
-    max-width: 1700px;
-    min-width: 835px;
+    max-width: 100%;
+    min-width: 620px;
 }
 
 .card:hover {
@@ -221,15 +217,13 @@ a:hover {
     left: -20px;
 }
 
+/* contact me information */
 #contact-me {
     display: flex;
     flex-wrap: wrap;
     margin-top: 2%;
-    position: absolute;
-    top: 2440px;
-    left: 80px;
-    margin: 0px;
-    width: 100%;
+    width: 98%;
+    margin: 3% 2%;
 }
 
 .contact-info {
@@ -259,101 +253,173 @@ footer {
     color: var(--dark-color-vibrant);
     text-align: center;
     text-transform: uppercase;
-    position: absolute;
-    top: 2800px;
-    left: 80px;
     margin: 0px;
     width: 100%;
 }
 
 /* media responsive - tablet */
-@media screen and (max-width: 960px) {
-
-    /* navigation bar - adjust for tablet */
+@media screen and (max-width: 1024px) {
+    
+    /* navigation bar */
     nav {
-        text-align: center;
-        padding: 4px;
+        padding: 5px 2px;
     }
 
-    /* navigational bar text - adjust for tablet */
+    /* navigational bar text */
     .nav-item {
         font-size: var(--tablet-font-size-h3);
+        margin: 0;
     }
-
-    /* bar behind the name and title - adjust for tablet */
+    
+    /* bar behind the name and title */
     #header-bar {
-        width: 100%;
+        height: 240px;
         text-align: center;
     }
-
-
-    /* portfolio header name - adjust for tablet */
+    
+    .name-title {
+        float: none;
+        margin: 0 0 0 0;
+    }
+    
+    /* portfolio header name */
     #name {
         font-size: var(--tablet-font-size-name);
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 145px;
+        padding: 0 0 0 0;
     }
-
-    /* title below name -adjust for tablet */
+    
+    /* title below name */
     #title {
         font-size: var(--tablet-font-size-h2);
     }
-
-    /* portfolio picture - adjust for tablet */
+    
+    /* portfolio picture */
     #Portfolio-Picture {
-        margin:  0px 634px;
-        top: -50px;
+        position: relative;
+        margin: 0 20% 0 20%;
     }
-
+    
     #about-me {
-        bottom: 800px;
-        left: 300px;
-        right: 300px;
+        float: none;
+        margin: 0 0 0 0;
+        width: 98%;
+        margin: 3% 2% 0 2%;
     }
-
-    /* info title font size - adjust for tablet */
+    
+    /* info title font size */
     .info-title {
-        font-size: var(--tablet-font-size-h2);
+        font-size: var(--font-size-h2);
     }
-
-    /* titles for all the info sections - adjust for tablet */
+    
+    /* titles for all the info sections */
     .info-title {
-        font-size: var(--tablet-font-size-h2);
+        font: var(--font-size-h2) var(--font-header);
+        color: var(--dark-color-vibrant);
+        text-transform: uppercase;
+        padding: 0px 10px;
+        margin: 10px;
     }
-
-    /* the text in the about me section - adjust for tablet */
+    
+    /* the text in the about me section */
     #about-me-text {
-        font-size: var(--tablet-font-size-body);
+        font: var(--font-size-body) var(--font-body);
+        color: var(--dark-color-vibrant);
+        padding: 20px;
+        width: 100%;
     }
-
-
-    /* my work - adjust for tablet */
+    
+    /* information sections */
+    .info-section {
+        display: block;
+        box-shadow: -20px -20px var(--mid-color-neutral-transparent);
+        width: 80%;
+        background-color: var(--white);
+        height: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        color: var(--dark-color-vibrant);
+        padding: 0px 10px;
+        border: 15px solid var(--light-color-vibrant);
+        min-height: 355px;
+    }
+    
     #my-work {
-        top: 1550px;
-        left: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 98%;
+        margin: 3% 2% 0 2%;
     }
-
-    /* contact me section - adjust for tablet */
+    
+    /* my work card sections */
+    .card {
+        flex: 1 0 200px;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+        max-width: 100%;
+        min-width: 620px;
+    }
+    
+    .card:hover {
+        background-color: var(--light-color-vibrant);
+        color: var(--dark-color-vibrant);
+    }
+    
+    .card-header {
+        position: relative;
+        top: 20px;
+        padding: 20px;
+        background: var(--dark-color-vibrant);
+        color: var(--white);
+        font: var(--font-size-h2) var(--font-header);
+        text-transform: uppercase;
+        max-width: 1667px;
+    }
+    
+    .my-work-link {
+        position: relative;
+        left: -20px;
+    }
+    
+    /* contact me information */
     #contact-me {
-        top: 4330px;
-        left: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2%;
+        width: 98%;
+        margin: 3% 2%;
     }
-
+    
+    .contact-info {
+        font: var(--font-size-body) var(--font-header);
+        color: var(--mid-color-vibrant);
+        flex: 1 0 0;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+        max-width: 755px;
+        min-width: 380px;
+        max-width: 100px;
+    }
+    
     .contact-info-link:hover {
         color: var(--light-color-vibrant);
     }
-
+    
     .contact-icon {
         width: 100px;
         height: 100px;
     }
-
+    
     footer {
-        font-size: var(--tablet-font-size-h3);
-        top: 4800px;
-        left: 80px;
+        font: var(--font-size-h3) var(--font-header);
+        color: var(--dark-color-vibrant);
+        text-align: center;
+        text-transform: uppercase;
         margin: 0px;
+        width: 100%;
     }
 }
   
@@ -516,7 +582,7 @@ footer {
     .info-section {
         display: block;
         position: relative;
-        box-shadow: -10px -10px var(--mid-color-neutral-transparent);
+        box-shadow: -20px -20px var(--mid-color-neutral-transparent);
         width: 80%;
         background-color: var(--white);
         height: fit-content;
@@ -527,4 +593,7 @@ footer {
         border: 15px solid var(--light-color-vibrant);
     }
 }
-  
+
+/* media responsive - larger screens */
+@media screen and (min-width: 1440px) {
+}
