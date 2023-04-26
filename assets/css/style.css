@@ -28,9 +28,9 @@
 
     /*font sizes for phone*/
     --phone-font-size-body: 20px;
-    --phone-font-size-h3: 40px;
+    --phone-font-size-h3: 22px;
     --phone-font-size-h2: 25px;
-    --phone-font-size-name: 50px;
+    --phone-font-size-name: 40px;
 }
 
 /* changes the look of the selected elements (click and drag) */
@@ -273,7 +273,7 @@ footer {
     
     /* bar behind the name and title - sized for tablet */
     #header-bar {
-        height: 240px;
+        height: 220px;
         text-align: center;
     }
     
@@ -396,10 +396,10 @@ footer {
     }
     .nav-link {
         display: block;
-        padding: 12px 24px;
+        padding: 5px 24px;
         color: var(--dark-color-vibrant);
         font-family: var(--font-header);
-        font-size: var(--phone-font-size-h2);
+        font-size: var(--phone-font-size-h3);
         text-decoration: none;
         text-transform: uppercase;
         transition-duration: .25s;
@@ -407,99 +407,68 @@ footer {
     .nav-link:hover {
         background-color: var(--white);
     }
-
-    /* portfolio header name - mobile size */
-    #name {
-        font-size: var(--phone-font-size-name);
-        color: var(--white);
-        text-transform: uppercase;
-        padding: 10px 145px 0 20px;
-        margin: 2px 20px;
-    }
-
-    h2 {
-        font: var(--phone-font-size-h2) var(--font-header);
-    }
-
-    h3 {
-        font: var(--phone-font-size-h3) var(--font-header);
-    }
-
-    /* title below name */
-    #title {
-        color: var(--dark-color-vibrant);
-        text-transform: uppercase;
-        padding: 5px;
-        margin: 2px 185px;
-    }
-
-    /* bar behind the name and title */
+    
+    /* bar behind the name and title - sized for phone */
     #header-bar {
-        width: 100%;
-        height: 260px;
-        margin: 25px auto;
-        padding: 20px;
-        text-align: right;
-        background-image: linear-gradient(var(--mid-color-vibrant), var(--light-color-vibrant));
-    }
-
-    /* portfolio picture */
-    #Portfolio-Picture {
-        width: 80%;
-        position: relative;
-        margin: 0 20px;
-        padding: 20px;
+        height: 150px;
+        margin-bottom: 8%;
     }
     
-    /* info title font size */
-    .info-title {
-        font-size: var(--font-size-h2);
+    /* portfolio header name - sized for phone */
+    #name {
+        font-size: var(--phone-font-size-name);
     }
-
-    /* info content text font size */
-    #about-me-text {
-        font-size: var(--font-size-body);
+    
+    /* title below name - sized for phone */
+    #title {
+        font-size: var(--phone-font-size-h2);
     }
-
-    /* titles for all the info sections */
-    .info-title {
-        font: var(--phone-font-size-h2) var(--font-header);
-        color: var(--dark-color-vibrant);
-        text-transform: uppercase;
-        padding: 0px 10px;
-        margin: 10px;
-    }
-
-    /* the text in the about me section */
-    #about-me-text {
-        font: var(--phone-font-size-body) var(--font-body);
-        font-size: 95%;
-        color: var(--dark-color-vibrant);
-        padding: 20px;
-        width: 100%;
-    }
-
-    /* ofset divider in information sections */
-    .info-section-divider {
-        position: absolute;
-        margin-right: 0;
-        height: 7px;
-        width: 330px;
-    }
-
-    /* information sections */
-    .info-section {
-        display: block;
+    
+    /* portfolio picture - sized for phone */
+    #Portfolio-Picture {
         position: relative;
-        box-shadow: -20px -20px var(--mid-color-neutral-transparent);
-        width: 80%;
-        background-color: var(--white);
-        height: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-        color: var(--dark-color-vibrant);
-        padding: 0px 10px;
-        border: 15px solid var(--light-color-vibrant);
+        margin: 0 15% 0 15%;
+        width: 70%;
+    }
+    
+    /* info title font size - sized for phone */
+    .info-title {
+        font-size: var(--phone-font-size-h2);
+    }
+    
+    /* titles for all the info sections - sized for phone */
+    .info-title {
+        font-size: var(--phone-font-size-h2);
+    }
+    
+    /* the text in the about me section - sized for phone */
+    #about-me {
+        margin: 6% 2%;
+    }
+
+    #about-me-text {
+        font-size: var(--phone-font-size-body);
+    }
+
+    .card {
+        min-width: 200px;
+    }
+
+    .card-header {
+        font-size: var(--phone-font-size-h2);
+    }
+
+    #contact-me {
+        margin: 6% 2%;
+    }
+    
+    /* contact me information - sized for phone */
+    .contact-info {
+        font-size: var(--phone-font-size-body);
+    }
+
+    footer {
+        font-size: var(--phone-font-size-h3);
     }
 }
 
