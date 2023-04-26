@@ -21,13 +21,13 @@
     --font-size-name: 88px;
 
     /*font sizes for tablet*/
-    --tablet-font-size-body: 18px;
+    --tablet-font-size-body: 20px;
     --tablet-font-size-h3: 25px;
     --tablet-font-size-h2: 32px;
     --tablet-font-size-name: 75px;
 
     /*font sizes for phone*/
-    --phone-font-size-body: 16px;
+    --phone-font-size-body: 20px;
     --phone-font-size-h3: 40px;
     --phone-font-size-h2: 25px;
     --phone-font-size-name: 50px;
@@ -260,18 +260,18 @@ footer {
 /* media responsive - tablet */
 @media screen and (max-width: 1024px) {
     
-    /* navigation bar */
+    /* navigation bar - sized for tablet */
     nav {
         padding: 5px 2px;
     }
 
-    /* navigational bar text */
+    /* navigational bar text - sized for tablet */
     .nav-item {
         font-size: var(--tablet-font-size-h3);
         margin: 0;
     }
     
-    /* bar behind the name and title */
+    /* bar behind the name and title - sized for tablet */
     #header-bar {
         height: 240px;
         text-align: center;
@@ -282,23 +282,24 @@ footer {
         margin: 0 0 0 0;
     }
     
-    /* portfolio header name */
+    /* portfolio header name - sized for tablet */
     #name {
         font-size: var(--tablet-font-size-name);
-        padding: 0 0 0 0;
+        padding: 3% 0 0 0;
     }
     
-    /* title below name */
+    /* title below name - sized for tablet */
     #title {
         font-size: var(--tablet-font-size-h2);
     }
     
-    /* portfolio picture */
+    /* portfolio picture - sized for tablet */
     #Portfolio-Picture {
         position: relative;
         margin: 0 20% 0 20%;
     }
     
+    /* about me - sized for tablet */
     #about-me {
         float: none;
         margin: 0 0 0 0;
@@ -306,120 +307,28 @@ footer {
         margin: 3% 2% 0 2%;
     }
     
-    /* info title font size */
+    /* info title font size - sized for tablet */
     .info-title {
-        font-size: var(--font-size-h2);
+        font-size: var(--tablet-font-size-h2);
     }
     
-    /* titles for all the info sections */
+    /* titles for all the info sections - sized for tablet */
     .info-title {
-        font: var(--font-size-h2) var(--font-header);
-        color: var(--dark-color-vibrant);
-        text-transform: uppercase;
-        padding: 0px 10px;
-        margin: 10px;
+        font-size: var(--tablet-font-size-h2);
     }
     
-    /* the text in the about me section */
+    /* the text in the about me section - sized for tablet */
     #about-me-text {
-        font: var(--font-size-body) var(--font-body);
-        color: var(--dark-color-vibrant);
-        padding: 20px;
-        width: 100%;
+        font-size: var(--tablet-font-size-body);
     }
     
-    /* information sections */
-    .info-section {
-        display: block;
-        box-shadow: -20px -20px var(--mid-color-neutral-transparent);
-        width: 80%;
-        background-color: var(--white);
-        height: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-        color: var(--dark-color-vibrant);
-        padding: 0px 10px;
-        border: 15px solid var(--light-color-vibrant);
-        min-height: 355px;
-    }
-    
-    #my-work {
-        display: flex;
-        flex-wrap: wrap;
-        width: 98%;
-        margin: 3% 2% 0 2%;
-    }
-    
-    /* my work card sections */
-    .card {
-        flex: 1 0 200px;
-        margin: 10px;
-        padding: 10px;
-        text-align: center;
-        align-items: center;
-        max-width: 100%;
-        min-width: 620px;
-    }
-    
-    .card:hover {
-        background-color: var(--light-color-vibrant);
-        color: var(--dark-color-vibrant);
-    }
-    
-    .card-header {
-        position: relative;
-        top: 20px;
-        padding: 20px;
-        background: var(--dark-color-vibrant);
-        color: var(--white);
-        font: var(--font-size-h2) var(--font-header);
-        text-transform: uppercase;
-        max-width: 1667px;
-    }
-    
-    .my-work-link {
-        position: relative;
-        left: -20px;
-    }
-    
-    /* contact me information */
-    #contact-me {
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 2%;
-        width: 98%;
-        margin: 3% 2%;
-    }
-    
+    /* contact me information - sized for tablet */
     .contact-info {
-        font: var(--font-size-body) var(--font-header);
-        color: var(--mid-color-vibrant);
-        flex: 1 0 0;
-        margin: 10px;
-        padding: 10px;
-        text-align: center;
-        align-items: center;
-        max-width: 755px;
-        min-width: 380px;
-        max-width: 100px;
+        font-size: var(--tablet-font-size-body);
     }
-    
-    .contact-info-link:hover {
-        color: var(--light-color-vibrant);
-    }
-    
-    .contact-icon {
-        width: 100px;
-        height: 100px;
-    }
-    
+
     footer {
-        font: var(--font-size-h3) var(--font-header);
-        color: var(--dark-color-vibrant);
-        text-align: center;
-        text-transform: uppercase;
-        margin: 0px;
-        width: 100%;
+        font-size: var(--tablet-font-size-h3);
     }
 }
   
