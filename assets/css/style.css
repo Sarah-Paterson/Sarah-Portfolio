@@ -216,6 +216,10 @@ a:hover {
     left: -20px;
 }
 
+#primary-card {
+    min-width: 1000px;
+}
+
 /* contact me information */
 #contact-me {
     display: flex;
@@ -314,6 +318,10 @@ footer {
     /* titles for all the info sections - sized for tablet */
     .info-title {
         font-size: var(--tablet-font-size-h2);
+    }
+
+    #Horiseon-Refactor {
+        min-width: 50px;
     }
     
     /* the text in the about me section - sized for tablet */
