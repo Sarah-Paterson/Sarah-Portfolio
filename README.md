@@ -1,80 +1,74 @@
 # Sarah Paterson Portfolio
 
-## Description
+## What this portfolio is all about
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+This website, built with only HTML and CSS, is designed to provide a single landing page providing future employers information about me, examples of my work, a way to contact me, and a resume ready to be downloaded.
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+My motivation was to have all my professional qualities and contact information in a single, visually appealing, and easy to use space. So, I built this project to centralize that information and give future employers ease of access to my information.
 
-## Table of Contents (Optional)
+Through the process, I mostly learned about scaling and media inquiries. My biggest challenge was to shift my thinking from a single stagnant design that remains one size to creating a design that would work on many different scales. Though there is plenty of room to grow, I believe I was able to achieve a scalable, visually appealing, user friendly webpage.
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
+*Here is a link to my live website*
 
-- [Installation](#installation)
+## Table of Contents
+
+- [Design](#design)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
 
-## Installation
+## Design
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Because of my design background, the most logical place to start was at page design. My intention was to create a wireframe that included color, photos, and scaling. This way I could have something to aspire to create.
+
+Below is the wireframe I based my webpage on (made with Adobe Illustrator).
+![Wireframe Screenshot](./assets/images/Sarah-Portfolio-mockup-modified-sizes.png "Wireframe")
+
+From here, I could use my Illustrator file to determine sizing and color. Though the final page doesn’t look exactly like my initial mockup, I was able to create something very similar.
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Below are screenshots of elements on my live webpage. Please use *this link* to see the webpage yourself.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+Navigational Bar.
+![Nav Bar Screenshot](./assets/images/Screenshot-Navigation-Bar.png "Navigational Bar")
+Here is a comparison of the three navigational bars from the scale of a phone, tablet, and monitor. As you can tell, the phone navigation bar is only three lines, otherwise known as a hamburger menu. Below you can see what would happen in the phone if you were to click on the menu, and it also shows how the text changes when hovering over the items in the navigation menu for all three sizes.
+![Active Nav Bar Screenshot](./assets/images/Screenshot-Navigation-Bar-Active.png "Active Navigational Bar")
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+Additionally, the spacing changes from desktop to laptop and phone. Below you are able to see how the profile picture and About Me section moved to better accommodate a smaller screen.
+![About Me Screenshot](./assets/images/Screenshot-About-Me.png "About Me")
+
+The other change in scaling is how the projects are displayed under the My Work section. As shown in these screenshots, the desktop view has the items laid out with one larger than the others while the tablet and phone sizes have the projects stacked. Each project is linked for ease of access.
+![NMy Work Screenshot](./assets/images/Screenshot-My-Work.png "My Work")
+
+Finally, the Contact Me section changes slightly depending on the size. Each item is linked to make communicating with me easier.
+![Contact Me Screenshot](./assets/images/Screenshot-Contact-Me.png "Contact Me")
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+For this project, I used many resources to walk me through the process as well as some code from online sources. Please check out the original sources to discover more from those creators.
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+The adaptive hamburger menu (CSS only) came from this webpage article:
+https://alvarotrigo.com/blog/hamburger-menu-css/
+The code for the adaptive hamburger menu (CSS only) came directly from webpage:
+https://codepen.io/alvarotrigo/pen/yLzaPVJ
+Álvaro (@alvarotrigo), is the creator of the adaptive hamburger menu (CSS only). Their profile:
+https://codepen.io/alvarotrigo
 
-If you followed tutorials, include links to those here as well.
-
-## License
-
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
-
----
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
-MIT Licence
-
-
-
-
-
-reset css from this webpage
+My reset.css was provided by Alligator.io via this webpage:
 https://www.digitalocean.com/community/tutorials/css-minimal-css-reset
 
-adaptive hamburger Menu - CSS only from website 
-https://alvarotrigo.com/blog/hamburger-menu-css/
-https://codepen.io/alvarotrigo/pen/yLzaPVJ
-https://codepen.io/alvarotrigo
+I was also assisted by a tutor to problem solve some of the issues I dealt with.
+Collin Porter: cporter@bootcampspot.com
+
+I used many references from the University of Denver’s GitLab course material (DU-VIRT-FSF-PT-04-2023-U-LOLC) throughout my project. 
+The Coding Bootcamp github: https://github.com/coding-boot-camp
+
+A helpful resource I used for most of my questions was W3 School’s information on HTML: https://www.w3schools.com/html/default.asp
+And W3 School’s information on CSS: https://www.w3schools.com/css/default.asp
+
+The README template I used was provided by The Full-Stack Blog: https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
+
+## License
+MIT Licence
+

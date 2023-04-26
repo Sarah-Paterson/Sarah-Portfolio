@@ -76,7 +76,7 @@ a {
 
 /* link change color with hover */
 a:hover {
-    color: var(--mid-color-vibrant);
+    color: var(--light-color-vibrant);
 }
 
 #nav-toggle {
@@ -431,11 +431,6 @@ footer {
     }
     
     /* info title font size - sized for phone */
-    .info-title {
-        font-size: var(--phone-font-size-h2);
-    }
-    
-    /* titles for all the info sections - sized for phone */
     .info-title {
         font-size: var(--phone-font-size-h2);
     }
