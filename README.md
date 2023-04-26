@@ -8,7 +8,7 @@ My motivation was to have all my professional qualities and contact information 
 
 Through the process, I mostly learned about scaling and media inquiries. My biggest challenge was to shift my thinking from a single stagnant design that remains one size to creating a design that would work on many different scales. Though there is plenty of room to grow, I believe I was able to achieve a scalable, visually appealing, user friendly webpage.
 
-[](Here is a link to my live website)
+[Here is a link to my live website](https://sarah-paterson.github.io/Sarah-Portfolio/)
 
 ## Table of Contents
 
@@ -28,7 +28,7 @@ From here, I could use my Illustrator file to determine sizing and color. Though
 
 ## Usage
 
-Below are screenshots of elements on my live webpage. Please use [](this link) to see the webpage yourself.
+Below are screenshots of elements on my live webpage. Please use [this link](https://sarah-paterson.github.io/Sarah-Portfolio/) to see the webpage yourself.
 
 Navigational Bar.
 ![Nav Bar Screenshot](./assets/images/Screenshot-Navigation-Bar.png "Navigational Bar")
