@@ -481,4 +481,8 @@ footer {
         margin: -18% 0 0 35%;
         width: 65%;
     }
+
+    #primary-card {
+        min-width: 1500px;
+    }
 }
