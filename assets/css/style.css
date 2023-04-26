@@ -95,7 +95,6 @@ a:hover {
 /* bar behind the name and title */
 #header-bar {
     width: 100%;
-    margin: 125px auto;
     height: 260px;
     margin: 25px auto;
     padding: 20px;
@@ -173,7 +172,7 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
     color: var(--dark-color-vibrant);
-    padding: 0px 10px;
+    padding: 0px 2%;
     border: 15px solid var(--light-color-vibrant);
     min-height: 355px;
 }
@@ -257,8 +256,8 @@ footer {
     width: 100%;
 }
 
-/* media responsive - tablet */
-@media screen and (max-width: 1024px) {
+/* media responsive - tablet and smaller computer screens */
+@media screen and (max-width: 1240px) {
     
     /* navigation bar - sized for tablet */
     nav {
@@ -333,7 +332,7 @@ footer {
 }
   
 /* media responsive - phone */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 735px) {
         /* menu provided by https://codepen.io/alvarotrigo/pen/yLzaPVJ, https://codepen.io/alvarotrigo */
     #nav-toggle {
         display: block;
@@ -469,5 +468,14 @@ footer {
 
     footer {
         font-size: var(--phone-font-size-h3);
+    }
+}
+
+/* media responsive - larger than laptop */
+@media screen and (min-width: 1800px) {
+
+    #about-me {
+        margin: -18% 0 0 35%;
+        width: 65%;
     }
 }
