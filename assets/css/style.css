@@ -52,7 +52,18 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-content: center;
-    min-height: 100vh;
+    width: 100%;
+}
+
+header {
+    width: 100%;
+}
+
+/* navigation bar */
+nav {
+    text-align: right;
+    margin-top: 30px;
+    padding: 5px 125px;
 }
 
 /* navigation bar links */
@@ -66,13 +77,6 @@ a {
 /* link change color with hover */
 a:hover {
     color: var(--mid-color-vibrant);
-}
-
-/* navigation bar */
-nav {
-    text-align: right;
-    margin-top: 30px;
-    padding: 5px 125px;
 }
 
 #nav-toggle {
@@ -90,7 +94,7 @@ nav {
 
 /* bar behind the name and title */
 #header-bar {
-    min-width: 1920px;
+    width: 100%;
     margin: 125px auto;
     height: 260px;
     margin: 25px auto;
@@ -121,6 +125,7 @@ nav {
 #Portfolio-Picture {
     position: relative;
     margin: -380px 20px 10px 55px;
+    box-shadow: -10px -10px var(--mid-color-neutral-transparent);
 }
 
 .info-section-divider {
@@ -132,7 +137,7 @@ nav {
     bottom: 160px;
     left: 725px;
     margin: 0px;
-    width: 1150px;
+    width: 65%;
 }
 
 /* info title font size */
@@ -181,7 +186,7 @@ nav {
     top: 800px;
     left: 80px;
     margin: 0px;
-    width: 1800px;
+    width: 100%;
 }
 
 /* my work card sections */
@@ -224,7 +229,7 @@ nav {
     top: 2440px;
     left: 80px;
     margin: 0px;
-    width: 1800px;
+    width: 100%;
 }
 
 .contact-info {
@@ -258,13 +263,103 @@ footer {
     top: 2800px;
     left: 80px;
     margin: 0px;
-    width: 1800px;
+    width: 100%;
 }
 
 /* media responsive - tablet */
-@media screen and (max-width: 1286px) {
+@media screen and (max-width: 960px) {
 
-    /* menu provided by https://codepen.io/alvarotrigo/pen/yLzaPVJ, https://codepen.io/alvarotrigo */
+    /* navigation bar - adjust for tablet */
+    nav {
+        text-align: center;
+        padding: 4px;
+    }
+
+    /* navigational bar text - adjust for tablet */
+    .nav-item {
+        font-size: var(--tablet-font-size-h3);
+    }
+
+    /* bar behind the name and title - adjust for tablet */
+    #header-bar {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* portfolio header name - adjust for tablet */
+    #name {
+        font-size: var(--tablet-font-size-name);
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 145px;
+    }
+
+    /* title below name -adjust for tablet */
+    #title {
+        font-size: var(--tablet-font-size-h2);
+    }
+
+    /* portfolio picture - adjust for tablet */
+    #Portfolio-Picture {
+        margin:  0px 634px;
+        top: -50px;
+    }
+
+    #about-me {
+        bottom: 800px;
+        left: 300px;
+        right: 300px;
+    }
+
+    /* info title font size - adjust for tablet */
+    .info-title {
+        font-size: var(--tablet-font-size-h2);
+    }
+
+    /* titles for all the info sections - adjust for tablet */
+    .info-title {
+        font-size: var(--tablet-font-size-h2);
+    }
+
+    /* the text in the about me section - adjust for tablet */
+    #about-me-text {
+        font-size: var(--tablet-font-size-body);
+    }
+
+
+    /* my work - adjust for tablet */
+    #my-work {
+        top: 1550px;
+        left: 300px;
+    }
+
+    /* contact me section - adjust for tablet */
+    #contact-me {
+        top: 4330px;
+        left: 300px;
+    }
+
+    .contact-info-link:hover {
+        color: var(--light-color-vibrant);
+    }
+
+    .contact-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    footer {
+        font-size: var(--tablet-font-size-h3);
+        top: 4800px;
+        left: 80px;
+        margin: 0px;
+    }
+}
+  
+/* media responsive - phone */
+@media screen and (max-width: 480px) {
+        /* menu provided by https://codepen.io/alvarotrigo/pen/yLzaPVJ, https://codepen.io/alvarotrigo */
     #nav-toggle {
         display: block;
         opacity: 0;
@@ -337,109 +432,6 @@ footer {
     .nav-link:hover {
         background-color: var(--white);
     }
-
-    /* navigation bar - adjust for tablet */
-    /*
-    nav {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    */
-
-    /* navigational bar text - adjust for tablet */
-    /*
-    .nav-item {
-        font-size: var(--tablet-font-size-h3);
-    }
-    */
-
-    /* bar behind the name and title - adjust for tablet */
-    #header-bar {
-        width: 100%;
-        text-align: center;
-    }
-
-
-    /* portfolio header name - adjust for tablet */
-    #name {
-        font-size: var(--tablet-font-size-name);
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 145px;
-    }
-
-    /* title below name -adjust for tablet */
-    #title {
-        font-size: var(--tablet-font-size-h2);
-    }
-
-    /* portfolio picture - adjust for tablet */
-    #Portfolio-Picture {
-        margin:  0px 634px;
-    }
-
-    #about-me {
-        bottom: 800px;
-        left: 300px;
-        right: 300px;
-        width: 1286px;
-    }
-
-    /* info title font size - adjust for tablet */
-    .info-title {
-        font-size: var(--tablet-font-size-h2);
-    }
-
-    /* titles for all the info sections - adjust for tablet */
-    .info-title {
-        font-size: var(--tablet-font-size-h2);
-    }
-
-    /* the text in the about me section - adjust for tablet */
-    #about-me-text {
-        font-size: var(--tablet-font-size-body);
-    }
-
-    /* information sections - adjust for tablet */
-    .info-section {
-        width: 1286px;
-    }
-
-    /* my work - adjust for tablet */
-    #my-work {
-        top: 1550px;
-        left: 300px;
-        width: 1286px;
-    }
-
-    /* contact me section - adjust for tablet */
-    #contact-me {
-        top: 4330px;
-        left: 300px;
-        width: 1286px;
-    }
-
-    .contact-info-link:hover {
-        color: var(--light-color-vibrant);
-    }
-
-    .contact-icon {
-        width: 100px;
-        height: 100px;
-    }
-
-    footer {
-        font-size: var(--tablet-font-size-h3);
-        top: 4800px;
-        left: 80px;
-        margin: 0px;
-        width: 1800px;
-    }
-}
-  
-/* media responsive - phone */
-@media screen and (max-width: 480px) {
 
     /* portfolio header name - mobile size */
     #name {
