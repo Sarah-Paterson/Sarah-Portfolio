@@ -386,7 +386,7 @@ footer {
         top: 0;
         left: -100%;
         width: 300px;
-        height: 100%;
+        height: 50%;
         margin: 0;
         padding: 80px 0;
         list-style: none;
@@ -410,7 +410,7 @@ footer {
     
     /* bar behind the name and title - sized for phone */
     #header-bar {
-        height: 150px;
+        height: 200px;
         margin-bottom: 8%;
     }
     
@@ -464,14 +464,10 @@ footer {
     
     /* contact me information - sized for phone */
     .contact-info {
-        font-size: var(--phone-font-size-body);
+        font-size: 0px;
     }
 
     footer {
         font-size: var(--phone-font-size-h3);
     }
-}
-
-/* media responsive - larger screens */
-@media screen and (min-width: 1440px) {
 }
