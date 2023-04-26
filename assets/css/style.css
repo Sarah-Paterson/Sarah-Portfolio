@@ -321,7 +321,7 @@ footer {
     }
 
     #primary-card {
-        min-width: 50px;
+        min-width: 100%;
     }
     
     /* the text in the about me section - sized for tablet */
